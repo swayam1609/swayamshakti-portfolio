@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Swayamshakti Samal — Mathematical Sciences, AI and quantitative research.">
+  <meta name="theme-color" content="#0b0c0e">
+  <title>Swayamshakti Samal — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .certificate-card {
+      display: flex; align-items: center; gap: 17px; padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .certificate-info { min-width: 0; flex: 1; }
+    .certificate-info h3 { margin: 0 0 6px; font-size: 12px; }
+    .certificate-info p { margin: 0; color: #aaa8a1; font: 10px/1.6 var(--mono); }
+    .certificate-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .certificate-actions a { color: var(--mint); font: 9px var(--mono); }
+    .certificate-actions a:hover { color: var(--orange); }
+    @media (max-width: 520px) {
+      .certificate-card { align-items: flex-start; }
+      .certificate-card .document-icon { flex: 0 0 48px; }
+    }
+  </style>
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home" data-page="home" aria-label="Home" title="Home"><span>⌂</span></a>
+      <a class="nav-link" href="#projects" data-page="projects" aria-label="Projects" title="Projects"><span>▧</span></a>
+      <a class="nav-link" href="#experience" data-page="experience" aria-label="Experience and education" title="Experience & education"><span>▤</span></a>
+      <a class="nav-link" href="#skills" data-page="skills" aria-label="Skills and certifications" title="Skills & tools"><span>⌘</span></a>
+      <a class="nav-link" href="#resume" data-page="resume" aria-label="Résumé" title="Résumé"><span>▣</span></a>
+      <a class="nav-link" href="#contact" data-page="contact" aria-label="Contact" title="Contact"><span>✉</span></a>
+    </nav>
+
+    <aside class="profile-card">
+      <div class="profile-photo" aria-label="Profile photo placeholder">
+        <span>SS</span>
+        <small>Replace with your photo</small>
+      </div>
+      <h2>Swayamshakti<br>Samal</h2>
+      <p class="profile-role">Undergraduate researcher,<br>Mathematical Sciences<br>& Computing</p>
+      <p class="profile-tag">Curious by design.</p>
+      <p class="profile-bio">I work at the intersection of mathematics, data and computation — exploring quantitative research, financial markets and the models that explain them.</p>
+      <div class="social-row">
+        <a href="https://github.com/swayam1609" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">gh</a>
+        <a href="#" data-config-link="linkedin" aria-label="LinkedIn" title="Add LinkedIn URL">in</a>
+        <a href="#" data-config-link="email" aria-label="Email" title="Add email">✉</a>
+      </div>
+      <a class="resume-button" href="assets/resume.pdf" download id="sidebar-resume">Download résumé <span>↓</span></a>
+      <p class="location">India</p>
+    </aside>
+
+    <main class="main-content">
+      <!-- HOME -->
+      <section class="page active" id="home" data-section="home">
+        <div class="eyebrow">B.S. (Hons.) · Mathematical Sciences & Computing · AI Specialisation</div>
+        <h1>Mathematics & financial engineering<br><span>MATHEMATICAL MODELLING · COMPUTATION · QUANTITATIVE METHODS.</span></h1>
+        <p class="intro">I build, test and reason about quantitative ideas — from statistical models and financial mathematics to data-driven research. I’m interested in understanding not just whether a strategy works, but why it works.</p>
+        <div class="rule"></div>
+        <div class="stats">
+          <div><strong>01</strong><small>research focus</small></div>
+          <div><strong>AI</strong><small>specialisation</small></div>
+          <div><strong>∞</strong><small>questions to test</small></div>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card orange" href="#projects" data-go="projects">
+            <small>currently researching</small>
+            <h3>SPY Variance Risk Premium</h3>
+            <p>Studying the relationship between implied variance, realised variance and delta-hedged option returns.</p>
+            <span class="card-arrow">Explore project ↗</span>
+          </a>
+          <a class="feature-card mint" href="#experience" data-go="experience">
+            <small>academic foundation</small>
+            <h3>Mathematics, statistics & computing</h3>
+            <p>Probability, inference, linear algebra, numerical methods, algorithms and machine learning.</p>
+            <span class="card-arrow">Education & experience ↗</span>
+          </a>
+        </div>
+        <div class="section-heading"><h2>Research interests</h2><a href="#experience" data-go="experience">see my journey →</a></div>
+        <div class="interest-list">
+          <div><b>Systematic Quantitative Research</b><p>Research design, signal evaluation, empirical testing and robust backtesting.</p></div>
+          <div><b>Derivatives & Volatility</b><p>Options, implied volatility, variance risk premium and volatility surfaces.</p></div>
+          <div><b>Statistical Modelling</b><p>Probability, time-series analysis, estimation and regime-aware analysis.</p></div>
+          <div><b>AI & Applied Computing</b><p>Using programming and machine learning thoughtfully to solve mathematical problems.</p></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="page" id="projects" data-section="projects">
+        <h1>Selected<br><span>projects.</span></h1>
+        <p class="page-intro">Research and software projects built to turn mathematical ideas into experiments, analysis and working systems.</p>
+        <div class="project-tools">
+          <input id="project-search" type="search" placeholder="Search projects by name or description..." aria-label="Search projects">
+          <div class="filter-row" role="group" aria-label="Filter projects">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="quant">Quant</button>
+            <button class="filter" data-filter="python">Python</button>
+            <button class="filter" data-filter="software">Software</button>
+          </div>
+        </div>
+        <div class="project-list" id="project-list">
+          <article class="project-item" data-category="quant python" data-search="spy variance risk premium options implied realised variance delta hedging volatility surface">
+            <div class="project-tags"><span>Python</span><span>Quant Research</span></div>
+            <div class="project-copy"><h3>SPY Variance Risk Premium Research</h3><p>An empirical options research pipeline studying implied versus realised variance, volatility-surface quality and delta-hedged option performance, with transaction-cost considerations.</p><p class="project-meta">Options data · Volatility modelling · Backtesting</p></div>
+            <a href="https://github.com/swayam1609/spy-variance-risk-premium" target="_blank" rel="noreferrer" class="view-link">view ↗</a>
+          </article>
+          <article class="project-item" data-category="python quant" data-search="adaptive feature selection engine explainability statistical learning machine learning">
+            <div class="project-tags"><span>Python</span><span>Machine Learning</span></div>
+            <div class="project-copy"><h3>Adaptive Feature Selection Engine</h3><p>An explainability-guided feature selection project exploring how dataset characteristics can inform feature-selection choices across benchmark datasets.</p><p class="project-meta">Feature selection · Statistical learning · Evaluation</p></div>
+            <a href="https://github.com/swayam1609/AFSE-Adaptive-Feature-Selection-Engine" target="_blank" rel="noreferrer" class="view-link">view ↗</a>
+          </article>
+          <article class="project-item" data-category="software" data-search="dream drop inclusive education web application game accessibility audio video javascript">
+            <div class="project-tags"><span>HTML / CSS / JS</span><span>Software</span></div>
+            <div class="project-copy"><h3>Dream Drop — Inclusive Learning Experience</h3><p>A browser-based educational game developed for an inclusive-education initiative, with attention to accessible interaction, audio/video elements and learner experience.</p><p class="project-meta">Frontend development · UI/UX · Accessibility</p></div>
+            <a class="view-link" href="#experience" data-go="experience">context ↗</a>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>No projects match that search. Try another keyword or filter.</p>
+      </section>
+
+      <!-- EXPERIENCE / EDUCATION -->
+      <section class="page" id="experience" data-section="experience">
+        <h1>Education <span>&</span><br><span>experience.</span></h1>
+        <p class="page-intro">The academic foundation, practical work and research direction shaping how I approach problems.</p>
+        <div class="timeline">
+          <article class="timeline-item">
+            <time>2023 — Present</time>
+            <div><h3>B.S. (Hons.) in Mathematical Sciences & Computing</h3><h4>Sri Sathya Sai Institute of Higher Learning (SSSIHL)</h4><p>AI specialisation. Coursework spans mathematics, probability and statistics, programming, algorithms, databases and machine learning.</p></div>
+          </article>
+          <article class="timeline-item">
+            <time>Internship</time>
+            <div><h3>Software Development Intern</h3><h4>Sri Sathya Sai Vidya Vahini</h4><p>Contributed to the Dream Drop web application for an inclusive-education programme, working on frontend interaction, user experience and accessible learning activities.</p></div>
+          </article>
+        </div>
+        <div class="subsection">
+          <div class="section-heading"><h2>Relevant coursework</h2></div>
+          <div class="course-grid">
+            <span>Probability</span><span>Statistical Inference</span><span>Linear Algebra</span><span>Real Analysis</span><span>Numerical Analysis</span><span>Optimization Techniques</span><span>Differential Equations</span><span>Calculus</span><span>Data Structures & Algorithms</span><span>Database Management & SQL</span><span>Machine Learning</span><span>Programming in C / C++ / Python</span>
+          </div>
+        </div>
+        <div class="subsection">
+          <div class="section-heading"><h2>Academic direction</h2></div>
+          <p class="body-copy">I am developing a foundation for systematic quantitative research through mathematical coursework, independent research projects and hands-on programming. My current focus is on empirical derivatives research and disciplined strategy evaluation.</p>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="page" id="skills" data-section="skills">
+        <h1>Skills <span>&</span><br><span>tools.</span></h1>
+        <p class="page-intro">The methods and tools I use to explore problems, analyse data and build reproducible work.</p>
+        <div class="skill-grid">
+          <div><small>programming</small><h3>Languages</h3><p>Python<br>C / C++<br>SQL<br>JavaScript<br>HTML / CSS</p></div>
+          <div><small>mathematics</small><h3>Quantitative foundations</h3><p>Probability & Statistics<br>Linear Algebra<br>Calculus<br>Optimization<br>Numerical Methods</p></div>
+          <div><small>quant research</small><h3>Research methods</h3><p>Options analysis<br>Volatility modelling<br>Backtesting<br>Statistical analysis<br>Performance evaluation</p></div>
+          <div><small>data & tools</small><h3>Workflow</h3><p>NumPy & Pandas<br>Matplotlib<br>Git & GitHub<br>Jupyter<br>VS Code</p></div>
+        </div>
+        <div class="subsection">
+          <div class="section-heading"><h2>Certifications & professional learning</h2></div>
+          <div class="credential">
+            <div>
+              <h3>Financial Engineering</h3>
+              <p>Financial mathematics · Derivatives · Quantitative methods</p>
+            </div>
+            <a href="assets/Financial%20Engineering.pdf" target="_blank" rel="noreferrer" class="view-link">View PDF ↗</a>
+          </div>
+          <div class="credential">
+            <div>
+              <h3>Python for Finance and Algo Trading</h3>
+              <p>Python · Financial data analysis · Algorithmic trading</p>
+            </div>
+            <a href="assets/Python%20for%20Finance%20and%20Algo%20Trading.pdf" target="_blank" rel="noreferrer" class="view-link">View PDF ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section class="page" id="resume" data-section="resume">
+        <h1>Résumé <span>&</span><br><span>documents.</span></h1>
+        <p class="page-intro">A concise overview of my education, projects, technical skills and experience.</p>
+        <div class="button-row">
+          <a class="primary-button" href="assets/resume.pdf" download>Download résumé ↓</a>
+          <a class="secondary-button" href="assets/resume.pdf" target="_blank" rel="noreferrer">Open résumé ↗</a>
+        </div>
+        <div class="subsection">
+          <div class="section-heading"><h2>Certifications & professional learning</h2></div>
+          <p class="body-copy">Selected coursework relevant to financial engineering, quantitative finance and systematic trading.</p>
+
+          <div class="certificate-card">
+            <div class="document-icon">PDF</div>
+            <div class="certificate-info">
+              <h3>Financial Engineering</h3>
+              <p>Financial mathematics · Derivatives · Quantitative methods</p>
+              <div class="certificate-actions">
+                <a href="assets/Financial%20Engineering.pdf" target="_blank" rel="noreferrer">View certificate ↗</a>
+                <a href="assets/Financial%20Engineering.pdf" download>Download ↓</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="certificate-card">
+            <div class="document-icon">PDF</div>
+            <div class="certificate-info">
+              <h3>Python for Finance and Algo Trading</h3>
+              <p>Python · Financial data analysis · Algorithmic trading</p>
+              <div class="certificate-actions">
+                <a href="assets/Python%20for%20Finance%20and%20Algo%20Trading.pdf" target="_blank" rel="noreferrer">View certificate ↗</a>
+                <a href="assets/Python%20for%20Finance%20and%20Algo%20Trading.pdf" download>Download ↓</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="page" id="contact" data-section="contact">
+        <h1>Let's <span>connect.</span></h1>
+        <p class="page-intro">Open to conversations about quantitative research, financial mathematics, software projects and research collaborations.</p>
+        <div class="contact-list">
+          <a href="#" data-config-link="email"><small>email</small><b id="email-label">Add your email address</b><span>↗</span></a>
+          <a href="https://github.com/swayam1609" target="_blank" rel="noreferrer"><small>github</small><b>github.com/swayam1609</b><span>↗</span></a>
+          <a href="#" data-config-link="linkedin"><small>linkedin</small><b id="linkedin-label">Add your LinkedIn profile</b><span>↗</span></a>
+        </div>
+        <div class="contact-note"><span class="pulse"></span> Available for meaningful conversations and opportunities.</div>
+      </section>
+
+      <footer class="site-footer"><span>© <span id="year"></span> Swayamshakti Samal</span><span>Built with HTML · CSS · JavaScript</span></footer>
+    </main>
+  </div>
+</body>
+</html>
